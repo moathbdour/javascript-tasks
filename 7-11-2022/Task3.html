@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+    <script>
+         
+        function shorterInArray (Array){
+            let z=Array[0].length;
+            let lowvalue=Array[0];
+            for(let x=1;x<Array.length;x++)
+            {
+             if(Array[x].length<z){ 
+                z=Array[x].length;
+                lowvalue=Array[x];           
+            }
+            
+            };
+           
+            document.write(lowvalue );
+            
+
+         }
+         let y=["moath","khaled","hala","abusaleh","mo"];
+         shorterInArray(y);
+
+        //  document.write(shorterInArray ["moath","khaled","hala","abusaleh"]);
+    </script>
+    
+</body>
+</html>
