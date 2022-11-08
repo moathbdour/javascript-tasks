@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+
+    <form >
+      <!-- 'Courier New', Courier, monospace
+      'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+      Georgia, 'Times New Roman', Times, serif
+      Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif -->
+        <label for="font">Choose a font:</label>
+        <select name="font" id="font" onChange="update()">
+          <option value="arial" >arial</option>
+          <option value="Courier" >Courier</option>
+          <option value="serif">serif</option>
+          <option value="Geneva">Geneva</option>
+        </select>
+        <label for="fontsize">Choose a font size:</label>
+        <select name="fontsize" id="fontsize" onChange="update2()">
+          <option value="16" >16</option>
+          <option value="20" >20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+        </select>
+        Italic <input type="checkbox" id="italic" onclick="italic2()" >
+        Bold <input type="checkbox" id="bold22" onclick="bold2()" >
+        Underline <input type="checkbox" id="under" onclick="underline2()" >
+
+
+                <br>
+        <input type="text" id="hello" size="60%" height="200" >
+      </form>
+      
+      <script>
+        function   update (){
+              var select = document.getElementById("font");
+        var value = select.options[select.selectedIndex].value;
+        switch (value){
+
+case "arial": document.getElementById("hello").style.fontFamily="'Arial Narrow Bold', sans-serif";
+break;
+case "Courier": document.getElementById("hello").style.fontFamily="'Courier New', Courier, monospace";
+break;
+case "serif":  document.getElementById("hello").style.fontFamily="Georgia, 'Times New Roman', Times, serif";
+break;
+case "Geneva":  document.getElementById("hello").style.fontFamily="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+break;
+
+}
+
+        }
+        function   update2 (){
+              var select = document.getElementById('fontsize');
+        var value = select.options[select.selectedIndex].value;
+        switch (value){
+
+case "16": document.getElementById("hello").style.fontSize="16px";
+break;
+case "20": document.getElementById("hello").style.fontSize="20px";
+break;
+case "25": document.getElementById("hello").style.fontSize="25px";
+break;
+case "30": document.getElementById("hello").style.fontSize="30px";
+break;
+
+}
+        }
+        function italic2 (){
+            var j=document.getElementById("italic").checked;
+            if(j==true){
+                document.getElementById("hello").style.fontStyle="italic"
+
+                
+            }
+            else{
+                document.getElementById("hello").style.fontStyle="normal"
+
+            }
+         
+         
+        }
+        function bold2 (){
+            var j=document.getElementById("bold22").checked;
+            if(j==true){
+                document.getElementById("hello").style.fontWeight="bold"
+
+                
+            }
+            else{
+                document.getElementById("hello").style.fontWeight="100"
+
+            }
+         
+         
+        }
+        function underline2 (){
+            var j=document.getElementById("under").checked;
+            if(j==true){
+                document.getElementById("hello").style.textDecoration="underline";
+
+                
+            }
+            else{
+                document.getElementById("hello").style.textDecoration="none";
+
+            }
+         
+         
+        }
+      </script>
+    
+    
+</body>
+</html>

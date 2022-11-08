@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <form >
+        <label for="flag">Choose a flag:</label>
+        <select name="flag" id="flag" onChange="update()">
+          <option value="norway" >norway</option>
+          <option value="jordan" >jordan</option>
+          <option value="syria">syria</option>
+          <option value="yaman">yaman</option>
+        </select>
+      </form>
+      <img src="R.png" width="100px">
+      <script>
+        function   update (){
+              var select = document.getElementById('flag');
+        var value = select.options[select.selectedIndex].value;
+        switch (value){
+
+case "norway": document.getElementsByTagName("img")[0].src="r.png";
+break;
+case "jordan": document.getElementsByTagName("img")[0].src="j.webp";
+break;
+case "syria":  document.getElementsByTagName("img")[0].src="sy.png";
+break;
+case "yaman":  document.getElementsByTagName("img")[0].src="y.jpg";
+break;
+
+}
+
+
+
+
+        }
+        // var select = document.getElementById('flag');
+        // var value = select.options[select.selectedIndex].value;
+
+        // var choosed =document.getElementById("flag").value;
+        // document.write=(choosed);
+        // switch (choosed){
+
+        //     case "norway": document.getElementsByTagName("img")[0].src="r.png";
+        //     break;
+        //     case "jordan": document.getElementsByTagName("img")[0].src="j.webp";
+        //     break;
+        //     case "syria":  document.getElementsByTagName("img")[0].src="sy.png";
+        //     break;
+        //     case "yaman":  document.getElementsByTagName("img")[0].src="y.jpg";
+        //     break;
+
+        // }
+      </script>
+    
+</body>
+</html>
