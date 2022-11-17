@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="contanier">
+    <h1 id="names"></h1>
+<img src=""id="images">
+</div> -->
+
+
+
+<form >
+<select name="names" id="names">
+<input type="button"  id="btn" value="show image" onclick="show()">
+
+
+
+
+</select>
+</form>
+<img id="images" src="">
+
+
+
+
+
+
+    <script>
+async function breaking (){
+    
+
+
+    const myname = await fetch ("https://www.breakingbadapi.com/api/characters");
+
+    const data = await myname.json();
+
+    for(let i=0; i<data.length;i++){
+            // document.getElementById("table").innerHTML+=("<tr>" + "<td>"+"Actor "+(i+1)+" name"+data[i].name+ "</td>"+"<td>"+"<img src='"+data[i].img+"' width='150px' ;>"+"</td>"+"</tr>")
+            document.getElementById("names").innerHTML+=("<option value='"+data[i].name+"'>"+data[i].name+"</option>")
+    }
+
+
+}
+breaking();
+
+
+  async function show(){
+    let select = document.getElementById('names');
+        let value2 = select.options[select.selectedIndex].value;
+        
+        const myname = await fetch ("https://www.breakingbadapi.com/api/characters");
+
+         const data2 = await myname.json();
+        console.log(value2);
+         for(var l=0;l<data2.length;l++ ){
+             if (data2[l].name==value2)
+             document.getElementById("images").src=data2[l].img;
+         }
+}
+
+    </script>
+</body>
+</html>

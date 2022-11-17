@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="name2"  type="text"><br>
+    <input type="submit" id="submit3" onclick="arrange()">
+    <input type="submit" id="submit4" onclick="input()">
+
+
+
+
+    <script>
+         const myinputarr = [];
+  function input(){
+  
+let size =Number( prompt("enter how many numbers you want to arrange"));
+ 
+for(let a=0; a<size; a++) 
+{
+        myinputarr[a] =Number( prompt('Enter array Element ' + (a+1)));
+         console.log(myinputarr);
+}
+
+}
+function arrange(){
+    let Arr = [];
+ Arr=myinputarr;
+for (let i = 1; i < Arr.length; i++)
+    for (let j = 0; j < i; j++)
+        if (Arr[i] > Arr[j]) {
+          var x = Arr[i];
+          Arr[i] = Arr[j];
+          Arr[j] = x;
+        }
+console.log(Arr);
+}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="email" id="myemail" name="mymail">
+        <input type="submit" onclick="thecheck()" >
+    </form>
+
+    <script>
+   function thecheck(){
+    let g=document.getElementById("myemail").value;
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g
+    let match2=g.match(reg);
+    console.log(match2);
+   
+
+   }
+        
+    </script>
+
+    
+</body>
+</html>

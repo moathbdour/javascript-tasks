@@ -5,87 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 <body>
-    <p id="firstP"></p>
-    <p></p>
-    <p class="sec"></p>
-    <img id="img1" src="https://comicvine.gamespot.com/a/uploads/original/11135/111350907/7883237-2022071752-images.jpg" width="300px" >
-    
-    <br>
+    <script>
+        var myinputarr = [];
+var size = 12; // Array size
  
-
-<br>
-    <button onclick="document.getElementById('demo').innerHTML=Date()">the time is</button>
-    <p id="demo"></p>
-
-
-    <button onmouseover="document.getElementById('img2').innerHTML=block3()" 
-    onmouseout="document.getElementById('img2').innerHTML=block4()">try hover over me</button>
-    <img id="img2" style="display:none ;" src="https://comicvine.gamespot.com/a/uploads/original/11135/111350907/7883237-2022071752-images.jpg" width="150px">
-
-    <h2 class="example">A heading</h2>
-    <p class="example">A paragraph.</p> 
-
-
-
-    <form >
-        <label for="fontsize">Choose a font size:</label>
-        <select name="fontsize" id="fontsize" onChange="update2()">
-          <option value="16" >16</option>
-          <option value="20" >20</option>
-          <option value="25">25</option>
-          <option value="30">30</option>
-        </select>
-        Italic <input type="checkbox" id="italic" onclick="italic2()" >
-
-        <input type="text" id="hello" size="60%" height="200"   >
-
-      </form>
+for(var a=0; a<size; a++) 
+{
      
-      <script>
-
-         function italic2 (){
-            var j=document.getElementById("italic").checked;
-            if(j==true){
-                document.getElementById("hello").style.fontStyle="italic"
-
-                
-            }
-            else{
-                document.getElementById("hello").style.fontStyle="normal"
-
-            }
-         
-         
-        }
-        function   update2 (){
-              var select = document.getElementById("fontsize");
-        var value = select.options[select.selectedIndex].value;
-        switch (value){
-
-case "16": document.getElementById("hello").style.fontSize="16px";
-break;
-case "20": document.getElementById("hello").style.fontSize="20px";
-break;
-case "25": document.getElementById("hello").style.fontSize="25px";
-break;
-case "30": document.getElementById("hello").style.fontSize="30px";
-break;
-
+     
+    myinputarr[a] = prompt('Enter array Element ' + (a+1));
 }
-
-
-
-
-        }
-
-      </script>
+ 
+//user eneter array
+console.log(myinputarr);
+    </script>
     
-    
-   
-    
-    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
